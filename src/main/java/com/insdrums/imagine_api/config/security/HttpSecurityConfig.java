@@ -30,6 +30,7 @@ public class HttpSecurityConfig {
                 .authenticationProvider(daoAuthProvider)
                 .authorizeHttpRequests( authReqConfig -> {
 
+                    //Aca puedes declarar los endpoints para que esten habilitados en el spring security
                     authReqConfig.requestMatchers(HttpMethod.POST, "/users").permitAll();
                     authReqConfig.requestMatchers(HttpMethod.POST, "/auth/login").permitAll();
                     authReqConfig.requestMatchers(HttpMethod.POST, "/auth/validate").permitAll();

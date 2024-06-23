@@ -21,6 +21,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    //Aca puedes crear metodos separados para crear usuarios dependiendo del rol, acordarse de hacer el controller por cada metodo
     @Override
     public User registerOneUser(SaveUser newUser) {
 
